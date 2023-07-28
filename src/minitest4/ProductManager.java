@@ -139,7 +139,7 @@ public class ProductManager {
             objectOutputStream.writeObject(categories);
             objectOutputStream.close();
         } catch (IOException e) {
-            e.printStackTrace();
+
         }
     }
 
@@ -151,7 +151,7 @@ public class ProductManager {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             products = (ArrayList<Product>) objectInputStream.readObject();
         } catch (IOException | ClassNotFoundException | ClassCastException e) {
-            e.printStackTrace();
+
         }
         return products;
     }

@@ -65,7 +65,7 @@ public class CategoryManager {
             objectOutputStream.writeObject(categories);
             objectOutputStream.close();
         } catch (IOException e) {
-                e.printStackTrace();
+
         }
     }
 
@@ -77,7 +77,7 @@ public class CategoryManager {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             categories = (ArrayList<Category>) objectInputStream.readObject();
         } catch (IOException | ClassNotFoundException | ClassCastException e) {
-            e.printStackTrace();
+
         }
         return categories;
     }
